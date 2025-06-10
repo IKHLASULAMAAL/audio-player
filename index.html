@@ -2,32 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Audio Player</title>
+  <title>Custom Audio Player</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
   <style>
     body {
-      margin: 0;
-      height: 100vh;
+      background-color: #2e2e2e;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      height: 100vh;
+      margin: 0;
     }
 
-    h2 {
-      margin-bottom: 20px;
-      color: #333;
+    .plyr__controls {
+      border-radius: 50px;
     }
 
-    audio {
-      width: 300px;
+    .plyr {
+      width: 600px;
+      border-radius: 50px;
+      background-color: #1e1e1e;
     }
   </style>
 </head>
 <body>
-  <audio controls>
-    <source src="search-engine.mp3" type="audio/mpeg">
+  <audio id="player" controls>
+    <source src="search-engine.mp3" type="audio/mp3" />
   </audio>
+
+  <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player', {
+      controls: ['play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'settings'],
+    });
+  </script>
 </body>
 </html>
