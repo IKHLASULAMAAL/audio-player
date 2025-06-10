@@ -6,22 +6,25 @@
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
   <style>
     body {
-      background-color: #fffff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .plyr__controls {
-      border-radius: 50px;
+      background-color: #ffffff; /* Atau transparan jika diembed */
     }
 
     .plyr {
       width: 600px;
       border-radius: 50px;
-      background-color: #1e1e1e;
+      border: 0.5px solid #ccc;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .plyr__controls {
+      border-radius: 50px;
     }
   </style>
 </head>
