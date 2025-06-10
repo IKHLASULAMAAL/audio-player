@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Algoritma Dasar Audio</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff; 
+    }
+
+    .plyr {
+      width: 600px;
+      border-radius: 50px;
+      border: 0.5px solid #ccc;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .plyr__controls {
+      border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+  <audio id="player" controls>
+    <source src="algoritma-dasar.mp3" type="audio/mp3" />
+  </audio>
+
+  <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player', {
+      controls: ['play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'settings'],
+    });
+  </script>
+</body>
+</html>
